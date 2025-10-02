@@ -3,24 +3,36 @@
     "slug": "auto-body-repair",
     "title": "Auto Body Repair",
     "summary": "Collision repair, dent removal, paint match, frame straightening.",
-    "packages": []
+    "turnaround": "TODO: Provide typical turnaround windows by repair complexity (minor collision vs. heavy structural)",
+    "warranty": "TODO: Confirm lifetime workmanship or parts warranty language",
+    "addons": ["Insurance coordination", "Rental car assistance"],
+    "packages": [],
+    "todo": "Add pricing tiers for minor collision, major collision, and paintless dent repair."
   },
   {
     "slug": "ceramic-coating",
     "title": "Ceramic Coating",
     "summary": "Durable gloss and hydrophobic protection.",
+    "turnaround": "Typically 1-2 days with paint correction",
+    "warranty": "TODO: Add official coating manufacturer warranty term",
+    "addons": ["Wheel coating", "Glass coating", "Interior protection"],
     "packages": [
       { "name": "2-Year", "priceFrom": 699, "includes": ["Decon wash", "Single-stage polish", "2-year coating"] },
       { "name": "5-Year", "priceFrom": 1199, "includes": ["Correction", "5-year coating", "Wheels+glass add-on"] }
-    ]
+    ],
+    "todo": "Add coating brand names and maintenance kit details."
   },
   {
     "slug": "paint-protection-film-ppf",
     "title": "Paint Protection Film (PPF)",
     "summary": "Self-healing film for rock chips and road rash.",
+    "turnaround": "1-3 days depending on coverage",
+    "warranty": "Manufacturer backed 10-year film warranty",
+    "addons": ["Headlight film", "Ceramic top coat"],
     "packages": [
       { "name": "Front Bumper", "priceFrom": 399, "includes": ["Front bumper coverage"] },
       { "name": "Track Pack", "priceFrom": 1299, "includes": ["Full front", "Mirrors", "Rockers"] }
-    ]
+    ],
+    "todo": "Add gallery images of recent installs and financing options."
   }
 ]

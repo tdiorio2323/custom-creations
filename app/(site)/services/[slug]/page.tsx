@@ -1,45 +1,101 @@
+import Link from "next/link";
 import services from "@/content/services.json";
 import { notFound } from "next/navigation";
 
-type Props = { params: Promise<{ slug: string }> };
+type Service = {
+  slug: string;
+  title: string;
+  summary: string;
+  turnaround?: string;
+  warranty?: string;
+  addons?: string[];
+  todo?: string;
+  packages?: { name: string; priceFrom?: number; includes?: string[] }[];
+};
 
-export async function generateStaticParams() {
-  return (services as any[]).map(s => ({ slug: s.slug }));
+const typedServices = services as Service[];
+
+type ParamsPromise = { params: Promise<{ slug: string }> };
+
+export function generateStaticParams() {
+  return typedServices.map((service) => ({ slug: service.slug }));
 }
 
-export async function generateMetadata(props: Props) {
-  const params = await props.params;
-  const svc = (services as any[]).find(s => s.slug === params.slug);
+export async function generateMetadata({ params }: ParamsPromise) {
+  const resolved = await params;
+  const svc = typedServices.find((service) => service.slug === resolved.slug);
   return { title: svc ? svc.title : "Service" };
 }
 
-export default async function ServicePage(props: Props) {
-  const params = await props.params;
-  const svc = (services as any[]).find(s => s.slug === params.slug);
+export default async function ServicePage({ params }: ParamsPromise) {
+  const resolved = await params;
+  const svc = typedServices.find((service) => service.slug === resolved.slug);
   if (!svc) return notFound();
+
+  const currency = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
   return (
     <article className="grid gap-6">
-      <header className="card p-6">
-        <h1 className="text-2xl font-semibold">{svc.title}</h1>
-        <p className="text-black/70 mt-2">{svc.summary}</p>
+      <header className="card p-6 space-y-3">
+        <div>
+          <h1 className="text-2xl font-semibold">{svc.title}</h1>
+          <p className="text-black/70 mt-2">{svc.summary}</p>
+        </div>
+        <div className="grid gap-2 text-sm text-black/70 md:grid-cols-2">
+          {svc.turnaround ? <p><strong className="text-black">Turnaround:</strong> {svc.turnaround}</p> : null}
+          {svc.warranty ? <p><strong className="text-black">Warranty:</strong> {svc.warranty}</p> : null}
+        </div>
       </header>
+
       {svc.packages?.length ? (
         <section className="grid md:grid-cols-2 gap-4">
-          {svc.packages.map((p:any) => (
-            <div key={p.name} className="card p-5">
+          {svc.packages.map(pkg => (
+            <div key={pkg.name} className="card p-5 space-y-3">
               <div className="flex items-center justify-between">
-                <h3 className="font-semibold">{p.name}</h3>
-                <div className="badge">From ${p.priceFrom}</div>
+                <h3 className="font-semibold">{pkg.name}</h3>
+                {typeof pkg.priceFrom === "number" ? (
+                  <div className="badge">From {currency.format(pkg.priceFrom)}</div>
+                ) : null}
               </div>
-              <ul className="mt-3 list-disc pl-5 text-sm text-black/70">
-                {p.includes.map((i:string) => <li key={i}>{i}</li>)}
-              </ul>
+              {pkg.includes?.length ? (
+                <ul className="mt-1 list-disc pl-5 text-sm text-black/70">
+                  {pkg.includes.map(item => <li key={item}>{item}</li>)}
+                </ul>
+              ) : null}
             </div>
           ))}
         </section>
       ) : null}
-      <a href="/estimate" className="btn w-fit">Request an Estimate</a>
+
+      {svc.addons?.length ? (
+        <section className="card p-5">
+          <h2 className="font-semibold">Popular Add-ons</h2>
+          <ul className="mt-2 grid gap-2 text-sm text-black/70 sm:grid-cols-2">
+            {svc.addons.map(addon => <li key={addon} className="list-disc ml-5">{addon}</li>)}
+          </ul>
+        </section>
+      ) : null}
+
+      {!svc.packages?.length && svc.todo ? (
+        <div className="card p-5 text-sm text-black/70">
+          TODO: {svc.todo}
+        </div>
+      ) : null}
+
+      <div className="flex flex-wrap gap-3">
+        <Link
+          href={`/estimate?service=${svc.slug}`}
+          className="btn focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+        >
+          Start an Estimate
+        </Link>
+        <Link
+          href="/booking"
+          className="btn focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+        >
+          Book a Consultation
+        </Link>
+      </div>
     </article>
   );
 }
