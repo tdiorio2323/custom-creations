@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "auto-body-repair",
+    "title": "Auto Body Repair",
+    "summary": "Collision repair, dent removal, paint match, frame straightening.",
+    "packages": []
+  },
+  {
+    "slug": "ceramic-coating",
+    "title": "Ceramic Coating",
+    "summary": "Durable gloss and hydrophobic protection.",
+    "packages": [
+      { "name": "2-Year", "priceFrom": 699, "includes": ["Decon wash", "Single-stage polish", "2-year coating"] },
+      { "name": "5-Year", "priceFrom": 1199, "includes": ["Correction", "5-year coating", "Wheels+glass add-on"] }
+    ]
+  },
+  {
+    "slug": "paint-protection-film-ppf",
+    "title": "Paint Protection Film (PPF)",
+    "summary": "Self-healing film for rock chips and road rash.",
+    "packages": [
+      { "name": "Front Bumper", "priceFrom": 399, "includes": ["Front bumper coverage"] },
+      { "name": "Track Pack", "priceFrom": 1299, "includes": ["Full front", "Mirrors", "Rockers"] }
+    ]
+  }
+]
