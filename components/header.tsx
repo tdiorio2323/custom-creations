@@ -7,9 +7,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-black/80 backdrop-blur">
       <div className="container h-40 flex items-center justify-between py-4">
-        <Link href="/" className="flex items-center gap-4">
+        <Link href="/" className="flex items-center">
           <Image src="/logo.png" alt="Custom Creations Logo" width={160} height={160} className="rounded-full" />
-          <span className="text-2xl font-semibold tracking-tight text-white">Custom Creations</span>
         </Link>
         <nav className="hidden md:flex gap-8 text-lg text-white/90">
           <Link href="/services" className="hover:text-white transition">Services</Link>
