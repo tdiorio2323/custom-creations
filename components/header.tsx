@@ -9,7 +9,9 @@ export default function Header() {
       <div className="container py-6">
         <div className="flex flex-col items-center gap-6">
           <Link href="/" className="flex items-center">
-            <Image src="/logo.png" alt="Custom Creations Logo" width={160} height={160} className="rounded-full" />
+            <div className="rounded-full p-1 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-400 shadow-xl">
+              <Image src="/logo.png" alt="Custom Creations Logo" width={160} height={160} className="rounded-full" />
+            </div>
           </Link>
           <div className="flex items-center gap-8">
             <nav className="flex gap-8 text-lg text-white/90 uppercase tracking-wide">
