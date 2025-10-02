@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     to: process.env.CONTACT_TO || "info@creationcustomsllc.com",
     subject: "New Estimate Request",
     text: JSON.stringify(data, null, 2),
-    reply_to: data.email
+    replyTo: data.email
   });
   return Response.json({ ok: true });
 }

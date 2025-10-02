@@ -45,7 +45,7 @@ export default function EstimatePage() {
       </form>
       <aside className="card p-6">
         <h3 className="font-semibold">Fast Turnaround</h3>
-        <p className="text-sm text-black/70 mt-2">Attach photos via text or email after submission. We'll confirm parts and timelines.</p>
+        <p className="text-sm text-black/70 mt-2">Attach photos via text or email after submission. We&apos;ll confirm parts and timelines.</p>
       </aside>
     </div>
   );
