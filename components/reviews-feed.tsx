@@ -28,7 +28,7 @@ export default function ReviewsFeed() {
   }, []);
 
   if (!reviews.length) {
-    return <p className="text-sm text-black/60">Reviews are loading…</p>;
+    return <p className="text-sm text-white/70">Reviews are loading…</p>;
   }
 
   return (
