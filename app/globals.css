@@ -3,10 +3,49 @@
 @tailwind utilities;
 
 :root { --container: 1200px; }
+
+/* Carbon Fiber Background */
+body {
+  background-color: #0a0a0a;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    ),
+    linear-gradient(
+      135deg,
+      #1a1a1a 25%,
+      transparent 25%,
+      transparent 75%,
+      #1a1a1a 75%,
+      #1a1a1a
+    ),
+    linear-gradient(
+      45deg,
+      #1a1a1a 25%,
+      transparent 25%,
+      transparent 75%,
+      #1a1a1a 75%,
+      #1a1a1a
+    );
+  background-size: 4px 4px, 4px 4px, 20px 20px, 20px 20px;
+  background-position: 0 0, 0 0, 0 0, 10px 10px;
+}
+
 .container { max-width: var(--container); margin-inline: auto; padding-inline: 1rem; }
-.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium border border-black/10 shadow-sm hover:bg-black/5 active:scale-[.99] transition; }
-.input { @apply w-full rounded-lg border border-black/10 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-black/10 bg-white; }
-.label { @apply block text-xs font-medium text-black/70 mb-1; }
-.card { @apply rounded-2xl border border-black/10 bg-white/70 backdrop-blur shadow-sm; }
-.badge { @apply inline-flex items-center gap-1 rounded-full border border-black/10 px-2 py-1 text-xs bg-white; }
+.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium border border-white/20 shadow-sm hover:bg-white/10 active:scale-[.99] transition bg-white/5 text-white; }
+.input { @apply w-full rounded-lg border border-white/20 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-white/20 bg-black/40 text-white placeholder:text-white/50; }
+.label { @apply block text-xs font-medium text-white/70 mb-1; }
+.card { @apply rounded-2xl border border-white/10 bg-black/60 backdrop-blur shadow-lg; }
+.badge { @apply inline-flex items-center gap-1 rounded-full border border-white/20 px-2 py-1 text-xs bg-white/10 text-white; }
 .grid-auto { @apply grid gap-6; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }

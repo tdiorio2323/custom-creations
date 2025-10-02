@@ -9,7 +9,7 @@ export const metadata: Metadata = base;
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-dvh bg-white text-black">
+      <body className="min-h-dvh text-white">
         <Header />
         <main className="container py-8">{children}</main>
         <Footer />
