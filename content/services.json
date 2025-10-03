@@ -2,37 +2,104 @@
   {
     "slug": "auto-body-repair",
     "title": "Auto Body Repair",
+    "description": "Expert collision repair, paintless dent removal, and precision color matching. From minor door dings to major collision damage, we restore your vehicle to pre-accident condition with OEM-quality parts and factory-certified techniques.",
     "summary": "Collision repair, dent removal, paint match, frame straightening.",
-    "turnaround": "TODO: Provide typical turnaround windows by repair complexity (minor collision vs. heavy structural)",
-    "warranty": "TODO: Confirm lifetime workmanship or parts warranty language",
-    "addons": ["Insurance coordination", "Rental car assistance"],
-    "packages": [],
-    "todo": "Add pricing tiers for minor collision, major collision, and paintless dent repair."
+    "turnaround": "Minor repairs: 1-3 days. Major collision: 5-10 days depending on parts availability and structural work required.",
+    "warranty": "Lifetime warranty on workmanship and paint. All structural repairs backed by our certified frame technicians.",
+    "addons": ["Insurance coordination", "Rental car assistance", "Paintless dent repair (PDR)", "Headlight restoration"],
+    "packages": [
+      {
+        "name": "Paintless Dent Repair",
+        "priceFrom": 150,
+        "warranty": "Lifetime workmanship warranty",
+        "turnaround": "Same day for most repairs",
+        "includes": ["Door dings", "Hail damage", "Minor creases", "No paint or filler"]
+      },
+      {
+        "name": "Minor Collision",
+        "priceFrom": 800,
+        "warranty": "Lifetime workmanship and paint warranty",
+        "turnaround": "3-5 days",
+        "includes": ["Bumper repair/replace", "Paint match and blend", "Insurance estimate assistance", "Rental coordination"]
+      },
+      {
+        "name": "Major Collision",
+        "priceFrom": 2500,
+        "warranty": "Lifetime structural and paint warranty",
+        "turnaround": "5-10 days",
+        "includes": ["Frame straightening", "Panel replacement", "Multi-panel paint", "Full insurance claim handling", "OEM parts sourcing"]
+      }
+    ]
   },
   {
     "slug": "ceramic-coating",
     "title": "Ceramic Coating",
-    "summary": "Durable gloss and hydrophobic protection.",
-    "turnaround": "Typically 1-2 days with paint correction",
-    "warranty": "TODO: Add official coating manufacturer warranty term",
-    "addons": ["Wheel coating", "Glass coating", "Interior protection"],
+    "description": "Professional-grade ceramic coating application with multi-stage paint correction. Our ceramic packages deliver hydrophobic protection, UV resistance, and mirror-like gloss that lasts for years. We use only premium coatings from IGL and Gtechniq with manufacturer warranties.",
+    "summary": "Durable gloss and hydrophobic protection with professional paint correction.",
+    "turnaround": "1-2 days with paint correction included in all packages",
+    "warranty": "2-5 year manufacturer warranty depending on package. Warranty registration and maintenance kit included.",
+    "addons": ["Wheel coating (+$199)", "Glass coating (+$149)", "Interior protection (+$299)", "Headlight coating (+$99)"],
     "packages": [
-      { "name": "2-Year", "priceFrom": 699, "includes": ["Decon wash", "Single-stage polish", "2-year coating"] },
-      { "name": "5-Year", "priceFrom": 1199, "includes": ["Correction", "5-year coating", "Wheels+glass add-on"] }
-    ],
-    "todo": "Add coating brand names and maintenance kit details."
+      {
+        "name": "2-Year Protection",
+        "priceFrom": 699,
+        "warranty": "2-year manufacturer warranty",
+        "turnaround": "1-2 days",
+        "includes": ["Full decontamination wash", "Single-stage polish", "IGL Coatings Ecocoat Kenzo 2-year ceramic", "Maintenance kit and care instructions"]
+      },
+      {
+        "name": "5-Year Protection",
+        "priceFrom": 1199,
+        "warranty": "5-year manufacturer warranty",
+        "turnaround": "2 days",
+        "includes": ["Multi-stage paint correction", "Gtechniq Crystal Serum Light 5-year coating", "Wheel and glass coating add-ons", "Premium maintenance kit", "Annual inspection reminder"]
+      },
+      {
+        "name": "Premium 7-Year",
+        "priceFrom": 1799,
+        "warranty": "7-year manufacturer warranty",
+        "turnaround": "2-3 days",
+        "includes": ["Advanced paint correction", "Gtechniq Crystal Serum Ultra + EXO top coat", "Full exterior coating (wheels, glass, trim)", "Interior ceramic protection", "Lifetime maintenance support"]
+      }
+    ]
   },
   {
     "slug": "paint-protection-film-ppf",
     "title": "Paint Protection Film (PPF)",
-    "summary": "Self-healing film for rock chips and road rash.",
-    "turnaround": "1-3 days depending on coverage",
-    "warranty": "Manufacturer backed 10-year film warranty",
-    "addons": ["Headlight film", "Ceramic top coat"],
+    "description": "Self-healing paint protection film installation using premium XPEL and 3M films. Protect your investment from rock chips, scratches, and road debris with virtually invisible film coverage. Available in gloss or matte finishes with 10-year warranties.",
+    "summary": "Self-healing film for rock chips and road rash with 10-year warranty.",
+    "turnaround": "1-3 days depending on coverage area. Full wraps require 3-5 days.",
+    "warranty": "10-year manufacturer warranty covering yellowing, cracking, and peeling. Self-healing top coat included.",
+    "addons": ["Headlight film (+$199)", "Ceramic top coat (+$299)", "Door edges and handles (+$149)", "Matte finish upgrade (+15%)"],
     "packages": [
-      { "name": "Front Bumper", "priceFrom": 399, "includes": ["Front bumper coverage"] },
-      { "name": "Track Pack", "priceFrom": 1299, "includes": ["Full front", "Mirrors", "Rockers"] }
-    ],
-    "todo": "Add gallery images of recent installs and financing options."
+      {
+        "name": "Front Bumper",
+        "priceFrom": 399,
+        "warranty": "10-year manufacturer warranty",
+        "turnaround": "1 day",
+        "includes": ["Full front bumper coverage", "XPEL Ultimate Plus film", "Self-healing top coat"]
+      },
+      {
+        "name": "Track Pack",
+        "priceFrom": 1299,
+        "warranty": "10-year manufacturer warranty",
+        "turnaround": "2-3 days",
+        "includes": ["Full front fascia (bumper, hood, fenders)", "Side mirrors", "Rocker panels", "Headlight film included"]
+      },
+      {
+        "name": "Full Front Coverage",
+        "priceFrom": 2499,
+        "warranty": "10-year manufacturer warranty",
+        "turnaround": "3-4 days",
+        "includes": ["Full front clip", "A-pillars", "Door cups and edges", "Rear bumper loading area", "Ceramic top coat for enhanced gloss"]
+      },
+      {
+        "name": "Full Vehicle Wrap",
+        "priceFrom": 5999,
+        "warranty": "10-year manufacturer warranty",
+        "turnaround": "5-7 days",
+        "includes": ["Complete vehicle coverage", "Premium XPEL Ultimate Plus", "All edges wrapped", "Ceramic coating top layer", "Lifetime installation warranty"]
+      }
+    ]
   }
 ]

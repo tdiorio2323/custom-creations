@@ -1,4 +1,50 @@
 [
-  { "name": "Michael R.", "text": "Flawless repair and perfect paint match.", "rating": 5 },
-  { "name": "Alyssa S.", "text": "Ceramic coating made the car look brand new.", "rating": 5 }
+  {
+    "name": "Michael R.",
+    "vehicle": "2019 BMW M4",
+    "text": "After a fender bender, Custom Creations handled everything from insurance to final polish. The paint match is absolutely flawless—you'd never know my car was hit. Highly recommend!",
+    "rating": 5
+  },
+  {
+    "name": "Alyssa S.",
+    "vehicle": "2021 Tesla Model 3",
+    "text": "I went with the 5-year ceramic coating package and it's worth every penny. The gloss is incredible and water just sheets right off. These guys know what they're doing.",
+    "rating": 5
+  },
+  {
+    "name": "James P.",
+    "vehicle": "2018 Chevy Silverado",
+    "text": "Brought my truck in for collision repair after getting sideswiped on the expressway. They kept me updated every step of the way and finished ahead of schedule. Looks better than new!",
+    "rating": 5
+  },
+  {
+    "name": "Sophia M.",
+    "vehicle": "2020 Honda Accord",
+    "text": "Custom Creations did a full PPF install on my Accord. The install is seamless—no bubbles, no edges. I feel so much better knowing my paint is protected from rock chips.",
+    "rating": 5
+  },
+  {
+    "name": "David L.",
+    "vehicle": "2017 Porsche 911",
+    "text": "I'm picky about who touches my Porsche, and these guys passed the test. The paint correction and ceramic coating brought out a depth I didn't think was possible. Total professionals.",
+    "rating": 5
+  },
+  {
+    "name": "Maria G.",
+    "vehicle": "2022 Jeep Wrangler",
+    "text": "Needed both bumpers repaired and repainted. Not only did they match the color perfectly, they also helped me navigate the insurance claim process. Can't thank them enough!",
+    "rating": 5
+  },
+  {
+    "name": "Carlos V.",
+    "vehicle": "2016 Audi A4",
+    "text": "Had dents from a parking lot incident removed with their paintless dent repair. Saved me a ton compared to traditional body work and it looks perfect. Quick turnaround too.",
+    "rating": 5
+  },
+  {
+    "name": "Emily T.",
+    "vehicle": "2023 Mazda CX-5",
+    "text": "Just picked up my CX-5 after getting the Track Pack PPF. The coverage is exactly what I wanted—full front, mirrors, and rockers. Installation is flawless. Love it!",
+    "rating": 5
+  }
 ]
