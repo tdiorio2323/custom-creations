@@ -19,6 +19,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: site.name, template: "%s • Custom Creations" },
   description: "Auto body repair, ceramic coating, and PPF in Staten Island, NY.",
-  openGraph: { type: "website", title: site.name, url: site.url, images: ["/og/hero.jpg"] },
+  openGraph: { type: "website", title: site.name, url: site.url, images: ["/og-image.png"] },
   alternates: { canonical: site.url },
 };

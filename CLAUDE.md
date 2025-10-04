@@ -60,18 +60,36 @@ All data is currently stored in JSON files under `/content/`:
     /[slug]         # Dynamic service detail pages
     /estimate       # Estimate request form
     /contact        # Contact form with map
-    /portfolio      # Before/after gallery (placeholder)
+    /portfolio      # Before/after gallery
     /reviews        # Customer testimonials
     /faq            # FAQ accordion
     /booking        # Booking widget placeholder
+    /about          # About the business
+    /location       # Location/directions page
+    /insurance-claims # Insurance claims info
+    /blog           # Blog (placeholder)
   /api
     /contact        # Contact form submission endpoint
     /estimate       # Estimate form submission endpoint
+    /mock           # Mock data endpoints for development
+      /reviews      # Mock reviews data
+      /gallery      # Mock gallery data
+      /faqs         # Mock FAQs data
 /components
   header.tsx        # Sticky navigation header
   footer.tsx        # Site footer with business info
   hero.tsx          # Homepage hero section
   lead-form.tsx     # Reusable contact form
+  estimate-mini.tsx # Mini estimate form widget
+  featured-reviews.tsx # Reviews carousel
+  faq-preview.tsx   # FAQ preview for homepage
+  faq-accordion.tsx # Full FAQ accordion
+  review-card.tsx   # Individual review card
+  reviews-feed.tsx  # Reviews listing
+  gallery-grid.tsx  # Portfolio gallery grid
+  trust-badges.tsx  # Trust/certification badges
+  alert-banner.tsx  # Announcement/alert banner
+  mobile-call-bar.tsx # Sticky mobile CTA bar
 /lib
   seo.ts            # Site metadata and business info
   schema.ts         # Schema.org structured data
@@ -120,6 +138,7 @@ Required for full functionality (see `.env.example`):
 - `RESEND_API_KEY` - Email notifications via Resend
 - `CONTACT_TO` - Email recipient for form submissions (defaults to info@creationcustomsllc.com)
 - `GOOGLE_MAPS_API_KEY` - Google Maps embed
+- `GOOGLE_PLACES_API_KEY` - Google Places API for reviews/ratings
 - `NEXT_PUBLIC_SITE_URL` - Public site URL
 - `NEXT_PUBLIC_CAL_URL` - Booking calendar URL
 - `NEXT_PUBLIC_GBP_URL` - Google Business Profile URL
@@ -276,6 +295,7 @@ CONTACT_TO=info@creationcustomsllc.com
 # Optional but recommended
 RESEND_API_KEY=re_xxxxxxxxxxxxx
 GOOGLE_MAPS_API_KEY=AIzaSyxxxxxxxxxxxxxx
+GOOGLE_PLACES_API_KEY=AIzaSyxxxxxxxxxxxxxx
 GA_MEASUREMENT_ID=G-XXXXXXXXXX
 META_PIXEL_ID=123456789012345
 

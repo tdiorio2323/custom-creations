@@ -32,9 +32,9 @@ const Footer: FC = () => {
             <Image
               src="/logo.png"
               alt={site.name}
-              width={36}
-              height={36}
-              className="h-9 w-9 rounded-full ring-1 ring-zinc-700/50"
+              width={40}
+              height={40}
+              className="h-10 w-10"
             />
             <div className="text-lg font-semibold tracking-wide">{site.name}</div>
           </div>

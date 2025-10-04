@@ -9,17 +9,14 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-black/80 backdrop-blur">
       <div className="container py-6">
         <div className="flex flex-col items-center gap-6">
-          <Link href="/" className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-full">
-            <div className="rounded-full p-1 bg-gradient-to-br from-gray-300 via-gray-100 to-gray-400 shadow-xl">
-              <Image
-                src="/logo.png"
-                alt="Custom Creations logo"
-                width={160}
-                height={160}
-                className="rounded-full"
-                loading="lazy"
-              />
-            </div>
+          <Link href="/" className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60">
+            <Image
+              src="/logo.png"
+              alt="Custom Creations logo"
+              width={180}
+              height={180}
+              priority
+            />
           </Link>
           <div className="flex items-center gap-8">
             <nav className="flex gap-8 text-lg text-white/90 uppercase tracking-wide">
