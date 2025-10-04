@@ -31,12 +31,12 @@ export default function EstimatePage() {
   }
 
   return (
-    <div className="grid md:grid-cols-2 gap-8">
+    <div className="grid lg:grid-cols-2 gap-8 pb-24 lg:pb-8">
       <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4">
         {result.status !== "idle" && result.message ? (
           <AlertBanner kind={result.status === "success" ? "success" : "error"}>{result.message}</AlertBanner>
         ) : null}
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           <div><label className="label">Year</label><input className="input" {...register("year")} /></div>
           <div><label className="label">Make</label><input className="input" {...register("make")} /></div>
           <div><label className="label">Model</label><input className="input" {...register("model")} /></div>

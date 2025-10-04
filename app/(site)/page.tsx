@@ -81,7 +81,7 @@ export default function HomePage() {
         <FeaturedReviews />
       </section>
 
-      <section className="container mt-12 space-y-6 pb-16">
+      <section className="container mt-12 space-y-6 pb-24 lg:pb-16">
         <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <h2 className="text-2xl font-semibold text-white">Frequently Asked Questions</h2>
           <Link href="/faq" className="text-sm text-white underline">

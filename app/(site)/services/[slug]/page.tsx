@@ -48,13 +48,13 @@ export default async function ServicePage({ params }: ParamsPromise) {
       </header>
 
       {svc.packages?.length ? (
-        <section className="grid md:grid-cols-2 gap-4">
+        <section className="grid sm:grid-cols-2 gap-4">
           {svc.packages.map(pkg => (
             <div key={pkg.name} className="card p-5 space-y-3">
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <h3 className="font-semibold">{pkg.name}</h3>
                 {typeof pkg.priceFrom === "number" ? (
-                  <div className="badge">From {currency.format(pkg.priceFrom)}</div>
+                  <div className="badge whitespace-nowrap">From {currency.format(pkg.priceFrom)}</div>
                 ) : null}
               </div>
               {pkg.includes?.length ? (

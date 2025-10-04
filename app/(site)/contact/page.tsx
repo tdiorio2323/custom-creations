@@ -6,7 +6,7 @@ export const metadata = { title: "Contact" };
 export default function Contact() {
   const encodedAddress = encodeURIComponent(`${site.address.street} ${site.address.city} ${site.address.region} ${site.address.postal}`);
   return (
-    <div className="grid md:grid-cols-2 gap-8">
+    <div className="grid lg:grid-cols-2 gap-8 pb-24 lg:pb-8">
       <div className="card p-6">
         <h1 className="text-2xl font-semibold">Contact</h1>
         <div className="mt-4 text-sm text-black/70">{`${site.address.street}, ${site.address.city}, ${site.address.region} ${site.address.postal}`}</div>

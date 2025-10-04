@@ -11,7 +11,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="min-h-dvh text-white">
         <Header />
-        <main className="container py-8">{children}</main>
+        <main className="container py-8 pb-24 lg:pb-8">{children}</main>
         <Footer />
       </body>
     </html>

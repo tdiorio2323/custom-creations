@@ -50,14 +50,14 @@ export default function EstimateMini() {
           <AlertBanner kind="error">We couldn’t send that. Please retry or call 718-555-0123.</AlertBanner>
         </div>
       ) : null}
-      <form className="mt-4 grid gap-3 md:grid-cols-6" onSubmit={handleSubmit}>
-        <input className="input md:col-span-1" name="year" placeholder="Year" autoComplete="off" />
-        <input className="input md:col-span-1" name="make" placeholder="Make" autoComplete="off" />
-        <input className="input md:col-span-1" name="model" placeholder="Model" autoComplete="off" />
-        <input className="input md:col-span-1" name="name" placeholder="Your name" required autoComplete="name" />
-        <input className="input md:col-span-1" name="phone" placeholder="Phone" required autoComplete="tel" />
-        <input className="input md:col-span-2" name="notes" placeholder="Damage or service notes" />
-        <button className="btn md:col-span-1" type="submit" disabled={status === "loading"}>
+      <form className="mt-4 grid gap-3 sm:grid-cols-2 md:grid-cols-6" onSubmit={handleSubmit}>
+        <input className="input sm:col-span-1" name="year" placeholder="Year" autoComplete="off" />
+        <input className="input sm:col-span-1" name="make" placeholder="Make" autoComplete="off" />
+        <input className="input sm:col-span-1" name="model" placeholder="Model" autoComplete="off" />
+        <input className="input sm:col-span-1" name="name" placeholder="Your name" required autoComplete="name" />
+        <input className="input sm:col-span-1" name="phone" placeholder="Phone" required autoComplete="tel" />
+        <input className="input sm:col-span-2 md:col-span-2" name="notes" placeholder="Damage or service notes" />
+        <button className="btn sm:col-span-2 md:col-span-1" type="submit" disabled={status === "loading"}>
           {status === "loading" ? "Sending…" : "Submit"}
         </button>
       </form>
