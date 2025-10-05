@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const site = {
-  name: "Custom Creations",
+  name: "CUSTOM CREATIONS",
   url: "https://customcreationssi.com",
   phone: "+1-718-555-0123",
   email: "info@creationcustomsllc.com",
@@ -17,8 +17,8 @@ export const site = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: site.name, template: "%s • Custom Creations" },
+  title: { default: site.name, template: "%s • CUSTOM CREATIONS" },
   description: "Auto body repair, ceramic coating, and PPF in Staten Island, NY.",
-  openGraph: { type: "website", title: site.name, url: site.url, images: ["/og-image.png"] },
+  openGraph: { type: "website", title: site.name, url: site.url, images: ["/creation-customs-logo.png"] },
   alternates: { canonical: site.url },
 };

@@ -3,10 +3,10 @@ import { site } from "./seo";
 export const businessSchema = {
   "@context":"https://schema.org",
   "@type":"AutoBodyShop",
-  name: "Custom Creations",
+  name: "CUSTOM CREATIONS",
   url: site.url,
   telephone: site.phone,
-  image: site.url + "/og/hero.jpg",
+  image: site.url + "/creation-customs-logo.png",
   address: {
     "@type":"PostalAddress",
     streetAddress: site.address.street,
