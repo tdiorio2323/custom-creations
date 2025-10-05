@@ -2,6 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/seo";
+import { SITE } from "@/src/config/site";
 
 type LinkItem = { label: string; href: string; external?: boolean };
 
@@ -15,9 +16,9 @@ const nav: LinkItem[] = [
 ];
 
 const social: LinkItem[] = [
-  { label: "Instagram", href: "https://instagram.com/customcreationssi", external: true },
-  { label: "Facebook", href: "https://facebook.com/customcreationssi", external: true },
-  { label: "YouTube", href: "https://youtube.com/@customcreationssi", external: true },
+  { label: "Instagram", href: SITE.SOCIAL.INSTAGRAM || "#", external: !!SITE.SOCIAL.INSTAGRAM },
+  { label: "Facebook", href: SITE.SOCIAL.FACEBOOK || "#", external: !!SITE.SOCIAL.FACEBOOK },
+  { label: "YouTube", href: SITE.SOCIAL.YOUTUBE || "#", external: !!SITE.SOCIAL.YOUTUBE },
 ];
 
 const Footer: FC = () => {
@@ -46,10 +47,10 @@ const Footer: FC = () => {
           {/* CTA row */}
           <div className="flex flex-wrap gap-3">
             <a
-              href={`tel:${site.phone.replace(/[^\d+]/g, "")}`}
+              href={`tel:${SITE.PHONE.replace(/[^\d+]/g, "")}`}
               className="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium ring-1 ring-zinc-700 hover:ring-zinc-500 transition"
             >
-              Call {site.phone}
+              Call {SITE.PHONE}
             </a>
             <a
               href={`mailto:${site.email}`}

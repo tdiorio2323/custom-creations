@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AlertBanner from "./alert-banner";
+import { SITE } from "@/src/config/site";
 
 export default function EstimateMini() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -39,7 +40,7 @@ export default function EstimateMini() {
   return (
     <div className="card p-6">
       <h2 className="text-xl font-semibold">Start Your Estimate</h2>
-      <p className="text-sm text-black/70 mt-1">Share your vehicle details—we’ll text you within the hour.</p>
+      <p className="text-sm text-black/70 mt-1">Share your vehicle details—we&apos;ll text you within the hour.</p>
       {status === "success" ? (
         <div className="mt-4">
           <AlertBanner kind="success">Thanks! A Custom Creations advisor will follow up shortly.</AlertBanner>
@@ -47,7 +48,7 @@ export default function EstimateMini() {
       ) : null}
       {status === "error" ? (
         <div className="mt-4">
-          <AlertBanner kind="error">We couldn’t send that. Please retry or call 718-555-0123.</AlertBanner>
+          <AlertBanner kind="error">We couldn&apos;t send that. Please retry or call {SITE.PHONE}.</AlertBanner>
         </div>
       ) : null}
       <form className="mt-4 grid gap-3 sm:grid-cols-2 md:grid-cols-6" onSubmit={handleSubmit}>

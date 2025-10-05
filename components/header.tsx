@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, Menu, X } from "lucide-react";
 import { site } from "@/lib/seo";
+import { SITE } from "@/src/config/site";
 
 const navLinks = [
   { label: "Services", href: "/services" },
@@ -48,11 +49,11 @@ export default function Header() {
                 ))}
               </nav>
               <a
-                href={`tel:${site.phone.replace(/[^\d+]/g, "")}`}
+                href={`tel:${SITE.PHONE.replace(/[^\d+]/g, "")}`}
                 className="group relative bg-gradient-to-r from-white to-gray-100 text-black font-semibold text-sm px-6 py-3 uppercase tracking-wide rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
               >
                 <span className="relative z-10 flex items-center">
-                  <Phone className="size-4 mr-2" /> Call {site.phone}
+                  <Phone className="size-4 mr-2" /> Call {SITE.PHONE}
                 </span>
               </a>
             </div>
@@ -95,12 +96,12 @@ export default function Header() {
               ))}
               <div className="px-4 pt-4">
                 <a
-                  href={`tel:${site.phone.replace(/[^\d+]/g, "")}`}
+                  href={`tel:${SITE.PHONE.replace(/[^\d+]/g, "")}`}
                   className="group flex items-center justify-center w-full bg-gradient-to-r from-white to-gray-100 text-black font-semibold text-base px-6 py-4 uppercase tracking-wider rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/60 border border-white/20"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                   <span className="relative z-10 flex items-center">
-                    <Phone className="size-5 mr-3" /> Call {site.phone}
+                    <Phone className="size-5 mr-3" /> Call {SITE.PHONE}
                   </span>
                 </a>
               </div>
