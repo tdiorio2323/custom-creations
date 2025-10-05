@@ -35,29 +35,29 @@ export default function About() {
         <h2>Meet the Team</h2>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="card p-4">
-            <h3 className="text-lg font-semibold text-black">Tony Russo – Owner & Master Technician</h3>
-            <p className="text-sm text-black/70 mt-2">
+            <h3 className="text-lg font-semibold text-white">Tony Russo – Owner & Master Technician</h3>
+            <p className="text-sm text-white/70 mt-2">
               With over 20 years in auto body repair, Tony leads our collision and refinish department. His eye for
               color matching and structural repair has earned him a reputation across Staten Island for perfection.
             </p>
           </div>
           <div className="card p-4">
-            <h3 className="text-lg font-semibold text-black">Mike Chen – Paint & Coating Specialist</h3>
-            <p className="text-sm text-black/70 mt-2">
+            <h3 className="text-lg font-semibold text-white">Mike Chen – Paint & Coating Specialist</h3>
+            <p className="text-sm text-white/70 mt-2">
               Mike specializes in ceramic coatings and paint correction. Trained by IGL and Gtechniq, he ensures every
               coating job delivers maximum gloss, protection, and longevity.
             </p>
           </div>
           <div className="card p-4">
-            <h3 className="text-lg font-semibold text-black">Jessica Torres – PPF Lead Installer</h3>
-            <p className="text-sm text-black/70 mt-2">
+            <h3 className="text-lg font-semibold text-white">Jessica Torres – PPF Lead Installer</h3>
+            <p className="text-sm text-white/70 mt-2">
               Jessica is our PPF expert, certified by XPEL and 3M. Her precision installations ensure every film edge is
               seamless and every curve is perfectly wrapped—no lifting, no bubbles.
             </p>
           </div>
           <div className="card p-4">
-            <h3 className="text-lg font-semibold text-black">Danny O&apos;Brien – Estimator & Customer Liaison</h3>
-            <p className="text-sm text-black/70 mt-2">
+            <h3 className="text-lg font-semibold text-white">Danny O&apos;Brien – Estimator & Customer Liaison</h3>
+            <p className="text-sm text-white/70 mt-2">
               Danny handles estimates, insurance claims, and customer communication. He&apos;s your point of contact throughout
               the repair process, keeping you informed and making sure everything stays on track.
             </p>

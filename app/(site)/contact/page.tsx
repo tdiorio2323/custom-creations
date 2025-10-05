@@ -8,8 +8,8 @@ export default function Contact() {
   return (
     <div className="grid lg:grid-cols-2 gap-8 pb-24 lg:pb-8">
       <div className="card p-6">
-        <h1 className="text-2xl font-semibold">Contact</h1>
-        <div className="mt-4 text-sm text-black/70">{`${site.address.street}, ${site.address.city}, ${site.address.region} ${site.address.postal}`}</div>
+        <h1 className="text-2xl font-semibold text-white">Contact</h1>
+        <div className="mt-4 text-sm text-white/70">{`${site.address.street}, ${site.address.city}, ${site.address.region} ${site.address.postal}`}</div>
         <div className="mt-1">
           <a
             className="badge focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"

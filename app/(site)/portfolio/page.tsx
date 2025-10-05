@@ -22,8 +22,8 @@ export default function Portfolio() {
 
   if (!items.length) {
     return (
-      <div className="card p-6 space-y-3 text-black/70">
-        <h1 className="text-xl font-semibold text-black">Portfolio Coming Soon</h1>
+      <div className="card p-6 space-y-3 text-white/70">
+        <h1 className="text-xl font-semibold text-white">Portfolio Coming Soon</h1>
         <p>
           TODO: Drop high-quality before/after images into <code>public/images/portfolio</code> using the naming pattern
           <code> service-vehicle-01.jpg</code>.

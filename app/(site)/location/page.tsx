@@ -12,8 +12,8 @@ export default function LocationPage() {
         <p className="text-white/70 text-lg">Premium auto body service across the greater New York metro area.</p>
       </div>
 
-      <div className="card p-6 space-y-3 text-sm text-black/70">
-        <h2 className="text-xl font-semibold text-black">Visit Our Staten Island Headquarters</h2>
+      <div className="card p-6 space-y-3 text-sm text-white/70">
+        <h2 className="text-xl font-semibold text-white">Visit Our Staten Island Headquarters</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li>Parking lot entrance on Van Duzer St — TODO: confirm signage and gate hours.</li>
           <li>Customer lounge available; Wi-Fi and coffee stocked daily.</li>

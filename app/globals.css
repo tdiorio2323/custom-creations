@@ -4,42 +4,17 @@
 
 :root { --container: 1200px; }
 
-/* Carbon Fiber Background */
+/* Fixed Global Background */
 body {
   background-color: #0a0a0a;
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(255, 255, 255, 0.03) 2px,
-      rgba(255, 255, 255, 0.03) 4px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 2px,
-      rgba(255, 255, 255, 0.03) 2px,
-      rgba(255, 255, 255, 0.03) 4px
-    ),
-    linear-gradient(
-      135deg,
-      #1a1a1a 25%,
-      transparent 25%,
-      transparent 75%,
-      #1a1a1a 75%,
-      #1a1a1a
-    ),
-    linear-gradient(
-      45deg,
-      #1a1a1a 25%,
-      transparent 25%,
-      transparent 75%,
-      #1a1a1a 75%,
-      #1a1a1a
-    );
-  background-size: 4px 4px, 4px 4px, 20px 20px, 20px 20px;
-  background-position: 0 0, 0 0, 0 0, 10px 10px;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('/images/global-background.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .container { max-width: var(--container); margin-inline: auto; padding-inline: 1rem; }

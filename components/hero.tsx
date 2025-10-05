@@ -20,7 +20,7 @@ export default function Hero() {
           </div>
           <div className="aspect-video overflow-hidden rounded-2xl border-2 border-white">
             <Image
-              src="/images/stock/hero.svg"
+              src="/images/hero-background.jpg"
               alt="Custom Creations Staten Island shop"
               width={1600}
               height={900}

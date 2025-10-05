@@ -10,7 +10,7 @@ type Form = z.infer<typeof EstimateSchema>;
 
 export default function EstimatePage() {
   const [result, setResult] = useState<{ status: "idle" | "success" | "error"; message?: string }>({ status: "idle" });
-  const { register, handleSubmit, formState:{errors, isSubmitting}, reset } = useForm<Form>({
+  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<Form>({
     resolver: zodResolver(EstimateSchema), defaultValues: { consent: true, service: "repair" as any }
   });
 
@@ -62,8 +62,8 @@ export default function EstimatePage() {
         </button>
       </form>
       <aside className="card p-6">
-        <h3 className="font-semibold">Fast Turnaround</h3>
-        <p className="text-sm text-black/70 mt-2">Attach photos via text or email after submission. We&apos;ll confirm parts and timelines.</p>
+        <h3 className="font-semibold text-white">Fast Turnaround</h3>
+        <p className="text-sm text-white/70 mt-2">Attach photos via text or email after submission. We&apos;ll confirm parts and timelines.</p>
       </aside>
     </div>
   );
