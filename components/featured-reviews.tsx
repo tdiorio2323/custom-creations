@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useReportError } from "@/lib/hooks/useReportError";
 import ReviewCard from "./review-card";
 
 type Review = {
@@ -22,7 +23,7 @@ export default function FeaturedReviews() {
         setReviews((data?.items || []).slice(0, 3));
       })
       .catch((error) => {
-        console.error(error);
+        useReportError("Failed to fetch featured reviews", { error });
       });
     return () => {
       mounted = false;

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useReportError } from "@/lib/hooks/useReportError";
 import FaqAccordion, { FaqItem } from "./faq-accordion";
 
 export default function FaqPreview() {
@@ -13,7 +14,7 @@ export default function FaqPreview() {
       .then((data) => {
         if (active) setItems(data?.items || []);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => useReportError("Failed to fetch FAQs", { error }));
     return () => {
       active = false;
     };

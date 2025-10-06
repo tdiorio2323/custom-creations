@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/lib/seo";
+import { locationHours } from "@/src/config/hours";
 
 export const metadata = { title: "Locations" };
 
@@ -15,7 +16,7 @@ export default function LocationPage() {
       <div className="card p-6 space-y-3 text-sm text-white/70">
         <h2 className="text-xl font-semibold text-white">Visit Our Staten Island Headquarters</h2>
         <ul className="list-disc pl-5 space-y-1">
-          <li>Parking lot entrance on Van Duzer St — TODO: confirm signage and gate hours.</li>
+          <li>Parking lot entrance on Van Duzer St.</li>
           <li>Customer lounge available; Wi-Fi and coffee stocked daily.</li>
           <li>After-hours key drop located by the front bay door; include VIN on envelope.</li>
         </ul>
@@ -43,7 +44,7 @@ export default function LocationPage() {
           <div className="mt-4 space-y-2 text-white/60 text-sm">
             <p>📍 75 Thompson St, Staten Island, NY 10304</p>
             <p>📞 (718) 555-0123</p>
-            <p>🕐 Mon–Fri: 8AM-6PM | Sat: 9AM-4PM</p>
+            <p>🕐 {locationHours.find(l => l.name === "Staten Island")?.hours}</p>
           </div>
           <div className="flex gap-3 mt-6">
             <Link href="/contact" className="btn focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60">Contact Us</Link>
@@ -59,7 +60,7 @@ export default function LocationPage() {
           <div className="mt-4 space-y-2 text-white/60 text-sm">
             <p>📍 Mobile Service Available</p>
             <p>📞 (718) 555-0124</p>
-            <p>🕐 Mon–Sat: By Appointment</p>
+            <p>🕐 {locationHours.find(l => l.name === "Brooklyn & Queens")?.hours}</p>
           </div>
           <div className="flex gap-3 mt-6">
             <Link href="/contact" className="btn focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60">Schedule Service</Link>
@@ -77,7 +78,7 @@ export default function LocationPage() {
           <div className="mt-4 space-y-2 text-white/60 text-sm">
             <p>📍 Concierge Service Available</p>
             <p>📞 (718) 555-0125</p>
-            <p>🕐 Mon–Fri: By Appointment</p>
+            <p>🕐 {locationHours.find(l => l.name === "Bronx & Manhattan")?.hours}</p>
           </div>
           <div className="flex gap-3 mt-6">
             <Link href="/contact" className="btn focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60">Book Concierge</Link>
@@ -93,7 +94,7 @@ export default function LocationPage() {
           <div className="mt-4 space-y-2 text-white/60 text-sm">
             <p>📍 Bergen, Hudson, Essex Counties</p>
             <p>📞 (201) 555-0126</p>
-            <p>🕐 Mon–Fri: 8AM-6PM | Sat: 9AM-3PM</p>
+            <p>🕐 {locationHours.find(l => l.name === "New Jersey")?.hours}</p>
           </div>
           <div className="flex gap-3 mt-6">
             <Link href="/contact" className="btn focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60">Contact Us</Link>
