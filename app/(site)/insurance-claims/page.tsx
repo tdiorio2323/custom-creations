@@ -14,10 +14,9 @@ export default function Insurance() {
         <li>Pickup day includes a walk-through, warranty briefing, and optional detailing add-ons.</li>
       </ol>
       <p>
-        Download the <a href="/claim-checklist.pdf" className="text-blue-500 underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
-          Claim Checklist (PDF)
-        </a>{" "}
-        — TODO: replace with finalized handout and include insurer contact list.
+        Download the <a href="/pdfs/claim-checklist.pdf" rel="noopener" className="text-blue-500 underline focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400">
+          Claim Checklist
+        </a>
       </p>
     </article>
   );

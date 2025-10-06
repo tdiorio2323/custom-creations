@@ -6,10 +6,10 @@ export const metadata = { title: "Portfolio" };
 
 function loadPortfolioItems() {
   try {
-    const directory = path.join(process.cwd(), "public/images/portfolio");
+    const directory = path.join(process.cwd(), "public/portfolio");
     const files = fs.readdirSync(directory).filter(file => /\.(png|jpe?g|webp|gif)$/i.test(file));
     return files.map(file => ({
-      src: `/images/portfolio/${file}`,
+      src: `/portfolio/${file}`,
       alt: `Custom Creations portfolio vehicle ${file.replace(/[-_]/g, " ")}`
     }));
   } catch (error) {
@@ -23,14 +23,10 @@ export default function Portfolio() {
   if (!items.length) {
     return (
       <div className="card p-6 space-y-3 text-white/70">
-        <h1 className="text-xl font-semibold text-white">Portfolio Coming Soon</h1>
-        <p>
-          TODO: Drop high-quality before/after images into <code>public/images/portfolio</code> using the naming pattern
-          <code> service-vehicle-01.jpg</code>.
-        </p>
-        <p>
-          Suggested shots: collision repair, ceramic coating gloss, and PPF installations. Minimum 6 images recommended for launch.
-        </p>
+        <h1 className="text-xl font-semibold text-white">Our Work</h1>
+        <p>No portfolio images have been uploaded yet.</p>
+        <p>To add images, upload them to the <code>public/portfolio</code> directory.</p>
+        <a href="/contact" className="btn">Upload Work</a>
       </div>
     );
   }

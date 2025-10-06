@@ -16,9 +16,9 @@ const nav: LinkItem[] = [
 ];
 
 const social: LinkItem[] = [
-  { label: "Instagram", href: SITE.SOCIAL.INSTAGRAM || "#", external: !!SITE.SOCIAL.INSTAGRAM },
-  { label: "Facebook", href: SITE.SOCIAL.FACEBOOK || "#", external: !!SITE.SOCIAL.FACEBOOK },
-  { label: "YouTube", href: SITE.SOCIAL.YOUTUBE || "#", external: !!SITE.SOCIAL.YOUTUBE },
+  { label: "Instagram", href: SITE.SOCIAL.INSTAGRAM, external: !!SITE.SOCIAL.INSTAGRAM },
+  { label: "Facebook", href: SITE.SOCIAL.FACEBOOK, external: !!SITE.SOCIAL.FACEBOOK },
+  { label: "YouTube", href: SITE.SOCIAL.YOUTUBE, external: !!SITE.SOCIAL.YOUTUBE },
 ];
 
 const Footer: FC = () => {

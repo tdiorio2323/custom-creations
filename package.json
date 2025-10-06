@@ -9,7 +9,11 @@
     "lint": "next lint",
     "test": "jest --watch",
     "test:ci": "jest",
-    "images:grab": "tsx scripts/grab-images.ts"
+    "images:grab": "tsx scripts/grab-images.ts",
+    "lint:fix": "next lint --fix",
+    "test:routes": "vitest run tests/routes.smoke.test.ts",
+    "scan:links": "node scripts/scan-links.mjs",
+    "crawl:internal": "BASE=http://localhost:3000 node scripts/crawl-internal.mjs"
   },
   "keywords": [],
   "author": "",
@@ -40,6 +44,8 @@
     "jest-environment-jsdom": "^29.7.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.18",
-    "tsx": "^4.20.6"
-  }
+    "tsx": "^4.20.6",
+    "vitest": "^3.2.4"
+  },
+  "packageManager": "pnpm@10.18.0+sha512.e804f889f1cecc40d572db084eec3e4881739f8dec69c0ff10d2d1beff9a4e309383ba27b5b750059d7f4c149535b6cd0d2cb1ed3aeb739239a4284a68f40cfa"
 }
