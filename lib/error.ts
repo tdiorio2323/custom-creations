@@ -1,6 +1,4 @@
-import { env } from '@/lib/env';
-
-export function useReportError(message: string, meta?: any) {
+export function reportError(message: string, meta?: any) {
   if (process.env.NODE_ENV !== 'production') {
     console.warn('Error reported:', message, meta);
   }

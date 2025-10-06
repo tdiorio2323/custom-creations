@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import AlertBanner from "./alert-banner";
-import { useReportError } from "@/lib/hooks/useReportError";
+import { reportError } from "@/lib/error";
 import { SITE } from "@/src/config/site";
 
 export default function EstimateMini() {
@@ -31,7 +31,7 @@ export default function EstimateMini() {
       form.reset();
       setStatus("success");
     } catch (error) {
-      useReportError("Failed to submit estimate", { error });
+      reportError("Failed to submit estimate", { error });
       setStatus("error");
     } finally {
       setTimeout(() => setStatus("idle"), 8000);

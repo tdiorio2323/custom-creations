@@ -8,7 +8,7 @@ import { SITE } from "@/src/config/site";
 
 const navLinks = [
   { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Gallery", href: "/portfolio" },
   { label: "Reviews", href: "/reviews" },
   { label: "Estimate", href: "/estimate" },
   { label: "Location", href: "/location" },
@@ -88,7 +88,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => setTimeout(() => setMobileMenuOpen(false), 100)}
                   className="group block mx-4 px-6 py-4 text-lg text-white font-medium uppercase tracking-wider rounded-xl bg-gradient-to-r from-white/5 to-white/0 border border-white/10 hover:from-white/15 hover:to-white/5 hover:border-white/20 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                 >
                   <span className="relative z-10">{link.label}</span>

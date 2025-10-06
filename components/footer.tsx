@@ -8,7 +8,7 @@ type LinkItem = { label: string; href: string; external?: boolean };
 
 const nav: LinkItem[] = [
   { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Gallery", href: "/portfolio" },
   { label: "Reviews", href: "/reviews" },
   { label: "Estimate", href: "/estimate" },
   { label: "Location", href: "/location" },
