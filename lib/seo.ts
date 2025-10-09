@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/creation-customs-logo.png",
-        width: 320,
-        height: 85,
+        width: 1200,
+        height: 630,
         alt: "CUSTOM CREATIONS - Auto Body Repair, Ceramic Coating, and PPF"
       }
     ],
