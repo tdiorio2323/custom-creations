@@ -23,7 +23,7 @@ export const BUSINESS = {
 
 export const site = {
   name: "CUSTOM CREATIONS",
-  url: "https://customcreationssi.com",
+  url: "https://creationcustoms.tdstudiosny.com",
   phone: SITE.PHONE,
   email: BUSINESS.email,
   address: {
@@ -37,7 +37,7 @@ export const site = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL("https://creationcustoms.tdstudiosny.com"),
   title: { default: site.name, template: "%s • CUSTOM CREATIONS" },
   description: "Auto body repair, ceramic coating, and PPF in Staten Island, NY.",
   openGraph: {
