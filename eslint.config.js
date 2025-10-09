@@ -1,0 +1,15 @@
+import vitest from 'eslint-plugin-vitest';
+
+export default [
+  {
+    plugins: { vitest },
+    rules: {
+      'no-console': ['error', { allow: ['warn'] }],
+      'vitest/expect-expect': 'error',
+      'vitest/no-commented-out-tests': 'warn',
+      'vitest/no-disabled-tests': 'warn',
+      'vitest/no-focused-tests': 'warn',
+      'vitest/no-identical-title': 'error',
+    },
+  },
+];

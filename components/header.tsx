@@ -8,10 +8,10 @@ import { SITE } from "@/src/config/site";
 
 const navLinks = [
   { label: "Services", href: "/services" },
+  { label: "Fleet", href: "/fleet" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Reviews", href: "/reviews" },
   { label: "Estimate", href: "/estimate" },
-  { label: "Location", href: "/location" },
   { label: "Contact", href: "/contact" },
 ];
 

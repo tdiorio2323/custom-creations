@@ -37,7 +37,8 @@
     "react-hook-form": "7.63.0",
     "resend": "6.1.2",
     "typescript": "5.9.3",
-    "zod": "4.1.11"
+    "zod": "4.1.11",
+    "eslint-plugin-vitest": "^0.5.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",

@@ -96,6 +96,22 @@ export default async function ServicePage({ params }: ParamsPromise) {
           Book a Consultation
         </Link>
       </div>
+
+      <section className="card p-6 space-y-4">
+        <h2 className="text-xl font-semibold">Commercial Fleet Services</h2>
+        <p className="text-black/70">
+          This service is available for commercial fleets. We offer 1-14 day insurance cycle times,
+          certified products only, and access to our networked partners. Detailing services available by appointment.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <Link href="/fleet" className="btn">
+            View Fleet Services
+          </Link>
+          <Link href="/capabilities.pdf" className="btn" target="_blank" rel="noopener noreferrer">
+            Download Capabilities PDF
+          </Link>
+        </div>
+      </section>
     </article>
   );
 }
