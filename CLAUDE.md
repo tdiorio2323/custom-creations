@@ -26,18 +26,35 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Development Commands
 
+**Note**: This project uses `pnpm` as the package manager (see `packageManager` field in package.json).
+
 ```bash
 # Start development server
-npm run dev
+pnpm dev
 
 # Build for production
-npm run build
+pnpm build
 
 # Start production server
-npm start
+pnpm start
 
 # Run ESLint
-npm run lint
+pnpm lint
+
+# Fix ESLint errors automatically
+pnpm lint:fix
+
+# Run tests in watch mode
+pnpm test
+
+# Run tests once (CI/CD)
+pnpm test:ci
+
+# Utility scripts
+pnpm images:grab          # Download/process portfolio images
+pnpm scan:links           # Scan site for broken links
+pnpm crawl:internal       # Crawl internal links (requires dev server running)
+pnpm build:pdfs           # Generate PDF versions of markdown content
 ```
 
 ## Architecture
@@ -48,8 +65,19 @@ All data is currently stored in JSON files under `/content/`:
 - `services.json` - Service offerings and pricing packages
 - `testimonials.json` - Customer reviews
 - `faqs.json` - Frequently asked questions
+- `posts/` - Blog posts as Markdown/MDX files (`.md` or `.mdx`)
 
 **Important**: This is intentionally using mock/static data for client preview. Once approved, you can plug in real APIs and backend services.
+
+### Blog System
+
+The blog uses a file-based system with Markdown/MDX support:
+- Blog posts live in `content/posts/` as `.md` or `.mdx` files
+- Posts are read server-side via `lib/posts.ts` (`listPosts()`, `readPost()`)
+- Markdown is parsed with `marked` and sanitized with `isomorphic-dompurify`
+- Dynamic routes: `/blog` (list) and `/blog/[slug]` (individual post)
+- Post slugs are derived from filenames (e.g., `welcome.mdx` → `/blog/welcome`)
+- To add a post: create a new `.md` or `.mdx` file in `content/posts/`
 
 ### Directory Structure
 
@@ -95,7 +123,18 @@ All data is currently stored in JSON files under `/content/`:
   schema.ts         # Schema.org structured data
   validators.ts     # Zod form schemas
   mailer.ts         # Email utility (Resend integration)
-/content            # JSON data files
+  posts.ts          # Blog post reading utilities
+/content            # JSON data files and blog posts
+  services.json     # Service offerings
+  testimonials.json # Customer reviews
+  faqs.json         # FAQ data
+  posts/            # Blog posts (Markdown/MDX)
+/scripts            # Utility scripts
+  grab-images.ts    # Download portfolio images
+  scan-links.mjs    # Check for broken links
+  crawl-internal.mjs # Internal link crawler
+  md-to-pdf.mjs     # Convert markdown to PDF (runs on postbuild)
+  gen-service.mjs   # Generate service pages
 /styles             # Global CSS with Tailwind utilities
 ```
 
@@ -279,6 +318,29 @@ Each FAQ requires:
 
 The homepage automatically displays the first 6 FAQs. The `/faq` page shows all FAQs.
 
+### Creating Blog Posts (`content/posts/`)
+
+Blog posts are stored as Markdown (`.md`) or MDX (`.mdx`) files:
+- Filename becomes the URL slug (e.g., `welcome.mdx` → `/blog/welcome`)
+- No frontmatter required (title is auto-generated from slug)
+- Markdown is rendered with `marked` library
+- HTML is sanitized with `isomorphic-dompurify` before rendering
+
+**Example:**
+Create `content/posts/ceramic-coating-guide.md`:
+```markdown
+# Complete Guide to Ceramic Coating
+
+Ceramic coating provides long-lasting protection...
+
+## Benefits
+- UV protection
+- Hydrophobic properties
+- Enhanced gloss
+```
+
+The post will be available at `/blog/ceramic-coating-guide`.
+
 ## Deployment Checklist
 
 Before deploying to production, ensure:
@@ -332,19 +394,19 @@ Run these commands locally to ensure everything builds correctly:
 
 ```bash
 # Install dependencies (if not already installed)
-npm install
+pnpm install
 
 # Run linter
-npm run lint
+pnpm lint
 
 # Run tests
-npm run test:ci
+pnpm test:ci
 
 # Build for production (check for errors)
-npm run build
+pnpm build
 
 # Test production build locally
-npm start
+pnpm start
 ```
 
 ### 6. Deployment Platform Setup (Vercel)
