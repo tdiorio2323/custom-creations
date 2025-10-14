@@ -54,7 +54,7 @@ pnpm test:ci
 pnpm images:grab          # Download/process portfolio images
 pnpm scan:links           # Scan site for broken links
 pnpm crawl:internal       # Crawl internal links (requires dev server running)
-pnpm build:pdfs           # Generate PDF versions of markdown content
+pnpm build:pdfs           # Generate PDF versions of markdown content (runs automatically after build)
 ```
 
 ## Architecture
@@ -208,10 +208,13 @@ This project uses Jest and React Testing Library for testing.
 
 ```bash
 # Run tests in watch mode (development)
-npm test
+pnpm test
 
 # Run tests once (CI/CD)
-npm run test:ci
+pnpm test:ci
+
+# Run route smoke tests with Vitest
+pnpm test:routes
 ```
 
 ### Test Setup
@@ -219,6 +222,7 @@ npm run test:ci
 - **Jest Config**: `jest.config.js` - configured for Next.js with custom aliases
 - **Setup File**: `jest.setup.js` - imports `@testing-library/jest-dom` for DOM matchers
 - **Test Location**: `__tests__/` directory - all test files follow `*.test.tsx` naming pattern
+- **Vitest**: Used for route smoke tests in `tests/routes.smoke.test.ts`
 
 ### Writing Tests
 
