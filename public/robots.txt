@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://customcreationssi.com
+
+# Sitemaps
+Sitemap: https://customcreationssi.com/sitemap.xml

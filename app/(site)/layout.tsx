@@ -7,10 +7,29 @@ import MobileCallBar from "@/components/mobile-call-bar";
 import "../globals.css";
 
 const PHONE = process.env.NEXT_PUBLIC_PHONE || "";
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://customcreationssi.com";
 const IG = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "";
 
-export const metadata: Metadata = base;
+export const metadata: Metadata = {
+  ...base,
+  metadataBase: new URL(SITE_URL),
+  openGraph: {
+    ...base.openGraph,
+    type: "website",
+    url: SITE_URL,
+    title: "Creation Customs | Staten Island Auto Body & Customization",
+    description: "Auto body repair, ceramic coating, and paint protection film in Staten Island, NY. Call or text for a free estimate.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Creation Customs Auto Body Shop" }],
+  },
+  twitter: {
+    ...base.twitter,
+    card: "summary_large_image",
+    images: ["/og.jpg"],
+  },
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
