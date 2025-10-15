@@ -2,7 +2,7 @@
 
 ## Auto Body Repair
 1. [ ] "From collision chaos to showroom shine. This Staten Island commuter is road-ready again." (CTA: Book estimate)
-2. [ ] "Insurance claim approved? We handle supplements so you don’t have to." (CTA: Call 718-555-0123)
+2. [ ] "Insurance claim approved? We handle supplements so you don’t have to." (CTA: Call 718-759-8345)
 3. [ ] "Frame bench in action — precision matters when millimeters keep you safe." (CTA: Swipe for before)
 4. [ ] "Delivery day smiles at 75 Thompson St never get old." (CTA: Leave a review)
 5. [ ] "ADAS recalibrated, paint blended, gap checked. Staten Island’s OEM-level finish lives here." (CTA: Schedule inspection)

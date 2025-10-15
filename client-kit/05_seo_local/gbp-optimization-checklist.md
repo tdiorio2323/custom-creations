@@ -3,7 +3,7 @@
 ## Core Info
 - [ ] Business Name: Custom Creations
 - [ ] Address: 75 Thompson St, Staten Island, NY 10304
-- [ ] Phone: 718-555-0123
+- [ ] Phone: 718-759-8345
 - [ ] Website: https://customcreationssi.com
 - [ ] Hours: TODO: confirm service hours (Mon-Fri, Sat partial, Sun closed?)
 

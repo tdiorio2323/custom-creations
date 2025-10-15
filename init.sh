@@ -5,7 +5,7 @@ set -euo pipefail
 APP_NAME="Custom Creations"
 APP_SLUG="custom-creations"
 SITE_URL="https://customcreationssi.com"
-PHONE="+1-718-555-0123" # update later
+PHONE="+1-718-759-8345"
 EMAIL="info@creationcustomsllc.com"
 ADDRESS_STREET="75 Thompson St"
 ADDRESS_CITY="Staten Island"

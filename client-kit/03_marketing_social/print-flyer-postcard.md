@@ -10,7 +10,7 @@
 - Headline: “Collision. Ceramic. Protection. Staten Island’s Concierge Autobody.”
 - Subhead: “75 Thompson St • Insurance Advocates • Lifetime Workmanship.”
 - CTA Button: QR code linking to `https://customcreationssi.com/estimate`.
-- Include phone 718-555-0123 and icons for Auto Body Repair, Ceramic Coating, PPF.
+- Include phone 718-759-8345 and icons for Auto Body Repair, Ceramic Coating, PPF.
 
 ## Back Design
 - Section 1: “How it works” (Drop-off, Repair, Delivery) with checkboxes.

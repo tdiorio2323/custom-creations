@@ -9,7 +9,7 @@ export default function ServicesPage() {
       {services.map(s => (
         <Link key={s.slug} href={`/services/${s.slug}`} className="card p-6 hover:bg-white">
           <h3 className="font-semibold">{s.title}</h3>
-          <p className="text-sm text-black/70 mt-2">{s.summary}</p>
+          <p className="text-sm text-white/70 mt-2">{s.summary}</p>
         </Link>
       ))}
     </div>

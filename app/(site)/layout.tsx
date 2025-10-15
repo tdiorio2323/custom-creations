@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { metadata as base } from "@/lib/seo";
+import Script from "next/script";
+import { metadata as base, site } from "@/lib/seo";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import MobileCallBar from "@/components/mobile-call-bar";
 import "../globals.css";
+
+const PHONE = process.env.NEXT_PUBLIC_PHONE || "";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "";
+const IG = process.env.NEXT_PUBLIC_INSTAGRAM_URL || "";
 
 export const metadata: Metadata = base;
 
@@ -13,6 +19,47 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="container py-8 pb-24 lg:pb-8">{children}</main>
         <Footer />
+        <MobileCallBar />
+
+        {/* LocalBusiness schema for SEO */}
+        <Script id="ld-localbusiness" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AutoBodyShop",
+            name: "Creation Customs",
+            url: SITE_URL || site.url,
+            telephone: PHONE,
+            email: site.email,
+            sameAs: IG ? [IG] : [],
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: site.address.street,
+              addressLocality: site.address.city,
+              addressRegion: site.address.region,
+              postalCode: site.address.postal,
+              addressCountry: "US",
+            },
+            geo: {
+              "@type": "GeoCoordinates",
+              latitude: site.address.lat,
+              longitude: site.address.lng,
+            },
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                opens: "08:00",
+                closes: "18:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Saturday",
+                opens: "09:00",
+                closes: "16:00",
+              },
+            ],
+          })}
+        </Script>
       </body>
     </html>
   );

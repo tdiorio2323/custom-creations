@@ -7,6 +7,7 @@ import { site } from "@/lib/seo";
 import { SITE } from "@/src/config/site";
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Fleet", href: "/fleet" },
   { label: "Portfolio", href: "/portfolio" },

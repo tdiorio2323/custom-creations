@@ -12,7 +12,7 @@
 - [ ] Content:
   - Top: Custom Creations emblem (white on graphite).
   - Middle: “Auto Body • Ceramic • PPF”.
-  - Bottom: Phone `718-555-0123` + QR (estimate URL).
+  - Bottom: Phone `718-759-8345` + QR (estimate URL).
 - TODO: Provide QR art linked to `https://customcreationssi.com/estimate`.
 
 ## Lobby Branding

@@ -11,7 +11,7 @@
   - [ ] Repair scope summary.
   - [ ] Insurance contact + adjuster notes.
   - [ ] Warranty statement (lifetime workmanship TBD).
-- [ ] Footer: “Questions? Call 718-555-0123 or email info@creationcustomsllc.com”.
+- [ ] Footer: “Questions? Call 718-759-8345 or email info@creationcustomsllc.com”.
 - TODO: Embed signature fields for digital sign-off via DocuSign template.
 
 ## Door Hanger / Mirror Tag

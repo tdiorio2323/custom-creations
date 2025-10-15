@@ -33,7 +33,7 @@
 - Ensure lead form tracking via GA4 + Meta Pixel (see `analytics-stack.md`).
 
 ## Compliance Checklist
-- [ ] Include phone number 718-555-0123 in all ads.
+- [ ] Include phone number 718-759-8345 in all ads.
 - [ ] Add disclaimer: “Insurance deductibles apply. Free rental coordination subject to availability.”
 - [ ] Upload logo & brand colors from `00_brand/brand-brief.md`.
 - TODO: Prepare UTM codes for each platform.

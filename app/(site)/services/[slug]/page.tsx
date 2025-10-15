@@ -39,11 +39,11 @@ export default async function ServicePage({ params }: ParamsPromise) {
       <header className="card p-6 space-y-3">
         <div>
           <h1 className="text-2xl font-semibold">{svc.title}</h1>
-          <p className="text-black/70 mt-2">{svc.summary}</p>
+          <p className="text-white/70 mt-2">{svc.summary}</p>
         </div>
-        <div className="grid gap-2 text-sm text-black/70 md:grid-cols-2">
-          {svc.turnaround ? <p><strong className="text-black">Turnaround:</strong> {svc.turnaround}</p> : null}
-          {svc.warranty ? <p><strong className="text-black">Warranty:</strong> {svc.warranty}</p> : null}
+        <div className="grid gap-2 text-sm text-white/70 md:grid-cols-2">
+          {svc.turnaround ? <p><strong className="text-white">Turnaround:</strong> {svc.turnaround}</p> : null}
+          {svc.warranty ? <p><strong className="text-white">Warranty:</strong> {svc.warranty}</p> : null}
         </div>
       </header>
 
@@ -58,7 +58,7 @@ export default async function ServicePage({ params }: ParamsPromise) {
                 ) : null}
               </div>
               {pkg.includes?.length ? (
-                <ul className="mt-1 list-disc pl-5 text-sm text-black/70">
+                <ul className="mt-1 list-disc pl-5 text-sm text-white/70">
                   {pkg.includes.map(item => <li key={item}>{item}</li>)}
                 </ul>
               ) : null}
@@ -70,14 +70,14 @@ export default async function ServicePage({ params }: ParamsPromise) {
       {svc.addons?.length ? (
         <section className="card p-5">
           <h2 className="font-semibold">Popular Add-ons</h2>
-          <ul className="mt-2 grid gap-2 text-sm text-black/70 sm:grid-cols-2">
+          <ul className="mt-2 grid gap-2 text-sm text-white/70 sm:grid-cols-2">
             {svc.addons.map(addon => <li key={addon} className="list-disc ml-5">{addon}</li>)}
           </ul>
         </section>
       ) : null}
 
       {!svc.packages?.length && svc.todo ? (
-        <div className="card p-5 text-sm text-black/70">
+        <div className="card p-5 text-sm text-white/70">
           TODO: {svc.todo}
         </div>
       ) : null}
@@ -99,7 +99,7 @@ export default async function ServicePage({ params }: ParamsPromise) {
 
       <section className="card p-6 space-y-4">
         <h2 className="text-xl font-semibold">Commercial Fleet Services</h2>
-        <p className="text-black/70">
+        <p className="text-white/70">
           This service is available for commercial fleets. We offer 1-14 day insurance cycle times,
           certified products only, and access to our networked partners. Detailing services available by appointment.
         </p>

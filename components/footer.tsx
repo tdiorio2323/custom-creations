@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/lib/seo";
 import { SITE } from "@/src/config/site";
+import CTAs from "@/components/cta-buttons";
 
 type LinkItem = { label: string; href: string; external?: boolean };
 
@@ -45,20 +46,7 @@ const Footer: FC = () => {
           </p>
 
           {/* CTA row */}
-          <div className="flex flex-wrap gap-3">
-            <a
-              href={`tel:${SITE.PHONE.replace(/[^\d+]/g, "")}`}
-              className="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium ring-1 ring-zinc-700 hover:ring-zinc-500 transition"
-            >
-              Call {SITE.PHONE}
-            </a>
-            <a
-              href={`mailto:${site.email}`}
-              className="inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium bg-zinc-100 text-zinc-900 hover:bg-white transition"
-            >
-              Email
-            </a>
-          </div>
+          <CTAs compact className="mt-2" />
         </div>
 
         {/* Quick links */}

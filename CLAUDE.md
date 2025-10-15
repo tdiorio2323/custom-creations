@@ -13,7 +13,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Name: Custom Creations
 - Address: 75 Thompson St, Staten Island, NY 10304
 - Contact Email: info@creationcustomsllc.com (for customer service/contact forms)
-- Phone: +1-718-555-0123 (placeholder - update in `lib/seo.ts`)
+- Phone: +1-718-759-8345
 
 ## Tech Stack
 
@@ -373,8 +373,8 @@ NEXT_PUBLIC_GBP_URL=https://g.page/custom-creations-si
 ### 2. Business Information
 
 Update business details in `lib/seo.ts`:
-- Phone number (replace placeholder `+1-718-555-0123`)
-- Verify email address
+- Phone number: +1-718-759-8345 (already configured)
+- Verify email address: info@creationcustomsllc.com (already configured)
 - Confirm business hours
 - Verify physical address and GPS coordinates
 

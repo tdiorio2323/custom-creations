@@ -25,7 +25,7 @@
 5. Delivery + documentation upload.
 
 ## Communication Plan
-- Dedicated hotline: 718-555-0123 ext ___ (TODO).
+- Dedicated hotline: 718-759-8345 ext ___ (TODO).
 - Email updates to adjuster every 48 hours.
 - Portal access for status tracking (if provided).
 
