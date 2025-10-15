@@ -2,11 +2,6 @@
   "cleanUrls": true,
   "redirects": [
     {
-      "source": "https://www.customcreationssi.com/:path*",
-      "destination": "https://customcreationssi.com/:path*",
-      "permanent": true
-    },
-    {
       "source": "/sitemap",
       "destination": "/sitemap.xml",
       "permanent": true
