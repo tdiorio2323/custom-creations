@@ -12,10 +12,10 @@ const benefits = [
 export function FleetStrip() {
   return (
     <section className="container mx-auto px-4 sm:px-6 py-16 md:py-20">
-      <div className="card p-8 md:p-12">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-bold text-white">Fleet Services Available</h2>
-          <p className="text-white/80 text-lg">
+      <div className="card p-6 sm:p-8 md:p-12">
+        <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white">Fleet Services Available</h2>
+          <p className="text-white/80 text-base sm:text-lg">
             Professional fleet repair and maintenance with certified products
           </p>
 

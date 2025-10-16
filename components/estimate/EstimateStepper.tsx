@@ -109,13 +109,13 @@ export function EstimateStepper() {
   if (isSuccess) {
     return (
       <div className="container mx-auto px-4 sm:px-6 py-16 md:py-20">
-        <div className="max-w-2xl mx-auto card p-8 text-center space-y-4">
+        <div className="max-w-2xl mx-auto card p-6 sm:p-8 text-center space-y-4">
           <div className="flex justify-center">
             <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center">
               <Check className="w-8 h-8 text-green-400" />
             </div>
           </div>
-          <h2 className="text-2xl font-semibold text-white">Estimate Request Received!</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-white">Estimate Request Received!</h2>
           <p className="text-white/70">
             We'll review your request and contact you within 24 hours.
           </p>
@@ -127,15 +127,15 @@ export function EstimateStepper() {
   return (
     <div className="container mx-auto px-4 sm:px-6 py-16 md:py-20">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold text-white mb-2 text-center">Start Your Estimate</h2>
-        <p className="text-white/70 text-center mb-8">Get a free quote in 3 easy steps</p>
+        <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2 text-center">Start Your Estimate</h2>
+        <p className="text-sm sm:text-base text-white/70 text-center mb-6 sm:mb-8">Get a free quote in 3 easy steps</p>
 
         {/* Progress Indicator */}
-        <div className="flex items-center justify-center mb-8 gap-2">
+        <div className="flex items-center justify-center mb-6 sm:mb-8 gap-2">
           {[1, 2, 3].map((num) => (
             <React.Fragment key={num}>
               <div
-                className={`flex items-center justify-center w-10 h-10 rounded-full font-semibold transition ${
+                className={`flex items-center justify-center w-11 h-11 rounded-full font-semibold transition ${
                   step >= num
                     ? "bg-white text-black"
                     : "glass text-white/50"
@@ -251,9 +251,9 @@ export function EstimateStepper() {
                         type="button"
                         onClick={() => removePhoto(index)}
                         aria-label={`Remove photo ${index + 1}`}
-                        className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-red-500 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+                        className="absolute -top-2 -right-2 w-11 h-11 rounded-full bg-red-500 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition sm:w-9 sm:h-9"
                       >
-                        <X className="w-4 h-4" />
+                        <X className="w-5 h-5 sm:w-4 sm:h-4" />
                       </button>
                     </div>
                   ))}

@@ -126,10 +126,10 @@ export function HeroCarousel() {
               <div className="absolute inset-0 flex items-center">
                 <div className="container mx-auto px-4 sm:px-6">
                   <div className="max-w-3xl text-white">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
                       {slide.title}
                     </h1>
-                    <p className="text-lg md:text-xl mb-8 text-white/90 drop-shadow">
+                    <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-white/90 drop-shadow">
                       {slide.subtitle}
                     </p>
                     <div className="flex flex-wrap gap-4">
@@ -173,30 +173,32 @@ export function HeroCarousel() {
       <button
         onClick={scrollPrev}
         aria-label="Previous slide"
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:bg-white/10 transition z-10"
+        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full glass flex items-center justify-center text-white hover:bg-white/10 transition z-10"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={scrollNext}
         aria-label="Next slide"
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:bg-white/10 transition z-10"
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full glass flex items-center justify-center text-white hover:bg-white/10 transition z-10"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => scrollTo(index)}
             aria-label={`Go to slide ${index + 1}`}
             aria-current={selectedIndex === index ? "true" : "false"}
-            className={`w-2 h-2 rounded-full transition ${
-              selectedIndex === index ? "bg-white w-8" : "bg-white/50"
+            className={`h-11 rounded-full transition flex items-center justify-center ${
+              selectedIndex === index ? "bg-white w-11 px-3" : "bg-white/50 w-11"
             }`}
-          />
+          >
+            <span className={`block rounded-full ${selectedIndex === index ? "w-8 h-2 bg-white" : "w-2 h-2 bg-white"}`} />
+          </button>
         ))}
       </div>
     </section>

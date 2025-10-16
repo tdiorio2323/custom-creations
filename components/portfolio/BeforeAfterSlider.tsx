@@ -91,7 +91,7 @@ const BeforeAfterItem = ({ beforeSrc, afterSrc, alt }: BeforeAfterProps) => {
         className="absolute top-0 bottom-0 w-1 bg-white shadow-lg"
         style={{ left: `${sliderPosition}%` }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-xl flex items-center justify-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white shadow-xl flex items-center justify-center">
           <ChevronLeft className="w-4 h-4 text-black absolute left-1" />
           <ChevronRight className="w-4 h-4 text-black absolute right-1" />
         </div>
@@ -172,14 +172,14 @@ export function BeforeAfterSlider() {
 
   return (
     <section className="container mx-auto px-4 sm:px-6 py-16 md:py-20">
-      <h2 id="featured-work" className="text-3xl font-bold text-white mb-8 text-center">
+      <h2 id="featured-work" className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8 text-center">
         Featured Work
       </h2>
       <div className="relative max-w-4xl mx-auto">
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex">
             {portfolioItems.map((item, index) => (
-              <div key={index} className="flex-[0_0_100%] min-w-0 px-4">
+              <div key={index} className="flex-[0_0_100%] min-w-0 px-2 sm:px-4">
                 <BeforeAfterItem {...item} />
               </div>
             ))}
@@ -190,14 +190,14 @@ export function BeforeAfterSlider() {
         <button
           onClick={scrollPrev}
           aria-label="Previous work"
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:bg-white/10 transition z-10"
+          className="absolute -left-2 sm:left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full glass flex items-center justify-center text-white hover:bg-white/10 transition z-10"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={scrollNext}
           aria-label="Next work"
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:bg-white/10 transition z-10"
+          className="absolute -right-2 sm:right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full glass flex items-center justify-center text-white hover:bg-white/10 transition z-10"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
@@ -210,10 +210,12 @@ export function BeforeAfterSlider() {
               onClick={() => scrollTo(index)}
               aria-label={`Go to work ${index + 1}`}
               aria-current={selectedIndex === index ? "true" : "false"}
-              className={`w-2 h-2 rounded-full transition ${
-                selectedIndex === index ? "bg-white w-8" : "bg-white/50"
+              className={`h-11 rounded-full transition flex items-center justify-center ${
+                selectedIndex === index ? "bg-white w-11 px-3" : "bg-white/50 w-11"
               }`}
-            />
+            >
+              <span className={`block rounded-full ${selectedIndex === index ? "w-8 h-2 bg-white" : "w-2 h-2 bg-white"}`} />
+            </button>
           ))}
         </div>
       </div>

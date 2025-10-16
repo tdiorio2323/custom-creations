@@ -38,12 +38,12 @@ export function MapDark() {
       className="container mx-auto px-4 sm:px-6 py-16 md:py-20"
     >
       <div className="card overflow-hidden">
-        <div className="p-6 md:p-8 text-center space-y-2 bg-black/40">
+        <div className="p-4 sm:p-6 md:p-8 text-center space-y-2 bg-black/40">
           <div className="flex items-center justify-center gap-2 text-white">
             <MapPin className="w-5 h-5" />
-            <h2 className="text-2xl font-bold">Visit Our Shop</h2>
+            <h2 className="text-xl sm:text-2xl font-bold">Visit Our Shop</h2>
           </div>
-          <p className="text-white/70">75 Thompson St, Staten Island, NY 10304</p>
+          <p className="text-sm sm:text-base text-white/70">75 Thompson St, Staten Island, NY 10304</p>
         </div>
 
         {/* Reserve height to prevent CLS */}
