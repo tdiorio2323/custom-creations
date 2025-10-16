@@ -52,6 +52,7 @@ pnpm test:ci
 
 # Utility scripts
 pnpm images:grab          # Download/process portfolio images
+pnpm images:compress      # Compress portfolio images for web optimization
 pnpm scan:links           # Scan site for broken links
 pnpm crawl:internal       # Crawl internal links (requires dev server running)
 pnpm build:pdfs           # Generate PDF versions of markdown content (runs automatically after build)
