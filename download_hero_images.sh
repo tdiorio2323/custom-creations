@@ -20,9 +20,9 @@ echo "⬇️  Downloading Hero 2: Ceramic Coating..."
 curl -L "https://unsplash.com/photos/LwVJURJz3Ds/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8Y2FyJTIwZGV0YWlsaW5nfGVufDB8fHx8MTY5NzU1NDc1Mnww&force=true" \
   -o "public/creation/hero-2-temp.jpg"
 
-# Download Hero 3: Fleet Services (Professional Fleet)
-echo "⬇️  Downloading Hero 3: Fleet Services..."
-curl -L "https://unsplash.com/photos/_aPqIbFw470/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8ZmxlZXQlMjB2ZWhpY2xlc3xlbnwwfHx8fDE2OTc1NTQ3NTJ8MA&force=true" \
+# Download Hero 3: Auto Body Repair Workshop
+echo "⬇️  Downloading Hero 3: Auto Body Repair Workshop..."
+curl -L "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1920" \
   -o "public/creation/hero-3-temp.jpg"
 
 echo "🔄 Converting images to WebP format..."
@@ -65,5 +65,5 @@ echo "3. Commit the changes when you're happy: git add public/creation/hero-*.we
 echo ""
 echo "📝 Image details:"
 echo "• Hero 1: Professional collision repair (spray painting)"
-echo "• Hero 2: Premium ceramic coating application"  
-echo "• Hero 3: Commercial fleet services"
+echo "• Hero 2: Premium ceramic coating application"
+echo "• Hero 3: Auto body repair workshop"
